@@ -24,6 +24,6 @@ ARG TARGETOS
 ARG TARGETARCH
 RUN CGO_ENABLED=0 make build-bq-transfer
 
-FROM gcr.io/distroless/base:nonroot@sha256:19d927c16ddb5415d5f6f529dbbeb13c460b84b304b97af886998d3fcf18ac81
+FROM gcr.io/distroless/base:nonroot@sha256:764b74b1789b4ec9044e6f20bb938d077fe8c7bcf9e4d3767eebb440c5d76f11
 COPY --from=transfer /src/cron/bq/data-transfer cron/bq/data-transfer
 ENTRYPOINT ["cron/bq/data-transfer"]
