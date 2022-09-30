@@ -27,7 +27,7 @@ jobs:
     if: ${{ github.event.issue.pull_request }}
     steps:
     - name: Harden Runner
-      uses: step-security/harden-runner@bdb12b622a910dfdc99a31fdfe6f45a16bc287a4 # v1
+      uses: step-security/harden-runner@2e205a28d0e1da00c5f53b161f4067b052c61f34 # v1
       with:
         egress-policy: audit # TODO: change to 'egress-policy: block' after couple of runs
 
